@@ -1,13 +1,14 @@
 /*jshint esversion: 6 */
 import React from 'react';
+import { NavLink } from 'react-router-dom';
 
 const Nav = () => {
   return(
     <nav className="main-nav">
       <ul>
-        <li><a href='#top'>Cats</a></li>
-        <li><a href='#top'>Dogs</a></li>
-        <li><a href='#top'>Computers</a></li>
+        <li><NavLink to={'/microsoft'}>Microsoft</NavLink></li>
+        <li><NavLink to='/macintosh'>Macintosh</NavLink></li>
+        <li><NavLink to='/linux'>Linux</NavLink></li>
       </ul>
     </nav>
   );
