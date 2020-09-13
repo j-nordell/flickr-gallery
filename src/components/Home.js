@@ -5,12 +5,13 @@ import Form from './Form';
 import PhotoContainer from './PhotoContainer';
 
 class Home extends Component {
+
   render() {
     return (
       <div>
         <Form history={this.props.history}></Form>
         <Nav></Nav>
-        <PhotoContainer></PhotoContainer>
+        <PhotoContainer data={this.props.results}></PhotoContainer>
       </div>
     );
   }

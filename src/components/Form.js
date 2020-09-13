@@ -14,7 +14,7 @@ class Form extends Component   {
     render() { 
     return (
       <form className="search-form" onSubmit={this.handleSubmit} action="/" >
-        <input type="search" name="search" placeholder="Search" required ref={ (input) => { console.log(input); return this.search = input; }
+        <input type="search" name="search" placeholder="Search" required ref={ (input) => {  this.search = input }
        }/>
         <button type="submit" className="search-button">
           <svg fill="#fff" height="24" viewBox="0 0 23 23" width="24" xmlns="http://www.w3.org/2000/svg">
