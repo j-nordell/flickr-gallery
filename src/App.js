@@ -10,7 +10,7 @@ import {
 import logo from './logo.svg';
 import './App.css';
 import Home from './components/Home';
-import NotFound from './components/NotFound';
+import PageNotFound from './components/PageNotFound';
 import apiKey from './config';
 
 // import { render } from '@testing-library/react';
@@ -79,7 +79,7 @@ class App extends Component {
               <Route exact path="/macintosh" render={(props) => <Home {...props} results={this.state.macintosh} searchFunction={this.performSearch}/>} />
               <Route exact path="/linux" render={(props) => <Home {...props} results={this.state.linux} searchFunction={this.performSearch}/> }/>
               <Route exact path="/search/:term" render={(props) => <Home {...props} results={this.state.searchResults} searchFunction={this.performSearch} />} />
-              <Route component={NotFound} />
+              <Route component={PageNotFound} />
             </Switch>
           </div>
       </BrowserRouter>
