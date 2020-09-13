@@ -1,15 +1,16 @@
 /*jshint esversion: 6 */
 import React, { Component } from 'react';
 
-class Form extends Component {
-  handleSubmit = (e) => {
-    e.preventDefault();
-    let searchTerm = this.search;
-    let path = `search/${searchTerm}`;
-    this.props.history.push(path);
-  }
+class Form extends Component   {
 
-  render() {
+    handleSubmit = (e) => {
+      e.preventDefault();
+      let searchTerm = this.search.value;
+      let path = `${searchTerm}`;
+      this.props.history.push(path);
+    };
+  
+    render() { 
     return (
       <form className="search-form" onSubmit={this.handleSubmit}>
         <input type="search" name="search" placeholder="Search" required ref={ (input) => this.search = input }/>
