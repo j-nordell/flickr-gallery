@@ -28,7 +28,13 @@ class App extends Component {
       };
     }
 
+    /**
+     * When the App mounts three separate calls are made to the Flickr API
+     * and stored in the appropriate state properties so that the call is not
+     * made every time a link is clicked, but only once
+     */  
     componentDidMount() {
+        /* gets the results for the search "microsoft" */
         axios.get(`https://www.flickr.com/services/rest/?method=flickr.photos.search&api_key=${apiKey}&tags=microsoft&per_page=24&format=json&nojsoncallback=1`)
           .then(response =>  {
               this.setState({
@@ -38,6 +44,7 @@ class App extends Component {
           .catch(error =>  {
             console.log("Error parsing/fetching data", error);
           });
+        /* gets the results for the search "macintosh" */
         axios.get(`https://www.flickr.com/services/rest/?method=flickr.photos.search&api_key=${apiKey}&tags=macintosh&per_page=24&format=json&nojsoncallback=1`)
           .then(response => {
             this.setState({
@@ -47,6 +54,7 @@ class App extends Component {
           .catch(error => {
             console.log("Error parsing/fetching data", error);
           });
+        /* Gets the results for the search "linux" */
         axios.get(`https://www.flickr.com/services/rest/?method=flickr.photos.search&api_key=${apiKey}&tags=linux&per_page=24&format=json&nojsoncallback=1`)
           .then(response => {
             this.setState({
@@ -58,6 +66,7 @@ class App extends Component {
           });
     }
     
+    /* dynamic search based on what the user enters in the search box */
     performSearch = (searchTerm) => {
       this.setState({ loading: true }, () => {
         axios.get(`https://www.flickr.com/services/rest/?method=flickr.photos.search&api_key=${apiKey}&tags=${searchTerm}&per_page=24&format=json&nojsoncallback=1`)
@@ -74,7 +83,8 @@ class App extends Component {
           });
         });
       }
-
+    
+    /* controls the routing of the app and passes down needed properties of the app to the components */
     render() {
       return(
       <BrowserRouter>

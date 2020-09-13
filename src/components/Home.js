@@ -5,7 +5,9 @@ import Form from './Form';
 import PhotoContainer from './PhotoContainer';
 
 class Home extends Component {
-
+  /** Component that displays the basic layout and passes needed information to the
+   *  Form and PhotoContainer components
+   */
   render() {
     return (
       <div>

@@ -5,6 +5,7 @@ import NotFound from './NotFound';
 
 const PhotoContainer = props => {
   const results = props.data;
+  /* Maps the results to build the URL that will be provided to each Photo component */
   let photos = results.map(photo =>
     <Photo url={`https://farm${photo.farm}.staticflickr.com/${photo.server}/${photo.id}_${photo.secret}.jpg`} key={photo.id}/>
   );

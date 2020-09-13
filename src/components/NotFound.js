@@ -1,6 +1,9 @@
 /*jshint esversion: 6 */
 import React from 'react';
 
+/**
+ * Returns HTML if the search yielded no results
+ */
 const NotFound = () => {
   return(
     <li className="not-found">

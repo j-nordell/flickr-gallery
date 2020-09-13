@@ -2,6 +2,9 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
 
+/**
+ * Returns the HTML for the navigation including the hard-coded links
+ */
 const Nav = () => {
   return(
     <nav className="main-nav">

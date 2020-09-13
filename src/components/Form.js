@@ -2,7 +2,11 @@
 import React, { Component } from 'react';
 
 class Form extends Component   {
-
+    /**
+     * Handles the event for submitting the form
+     * Performs a search for the value input in the text field
+     * @param {Object} e 
+     */
     handleSubmit = (e) => {
       e.preventDefault();
       let searchTerm = this.search.value;
@@ -10,7 +14,8 @@ class Form extends Component   {
       this.props.searchFunction(searchTerm);
       this.props.history.push(path);
     };
-  
+    
+    /** returns the form for searching */
     render() { 
     return (
       <form className="search-form" onSubmit={this.handleSubmit} action="/" >

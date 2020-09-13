@@ -1,6 +1,9 @@
 /*jshint esversion: 6 */
 import React from 'react';
 
+/**
+ * Returns HTML if the route is invalid.
+ */
 const PageNotFound = () => {
   return(
     <li className="not-found">
