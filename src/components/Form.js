@@ -7,7 +7,7 @@ class Form extends Component   {
       e.preventDefault();
       let searchTerm = this.search.value;
       let path = `/search/${searchTerm}`;
-      console.log(this.props.history);
+      this.props.searchFunction(searchTerm);
       this.props.history.push(path);
     };
   

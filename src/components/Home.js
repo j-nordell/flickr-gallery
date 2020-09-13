@@ -9,9 +9,9 @@ class Home extends Component {
   render() {
     return (
       <div>
-        <Form history={this.props.history}></Form>
-        <Nav></Nav>
-        <PhotoContainer data={this.props.results}></PhotoContainer>
+        <Form history={this.props.history} searchFunction={this.props.searchFunction} />
+        <Nav />
+        <PhotoContainer data={this.props.results}/>
       </div>
     );
   }
