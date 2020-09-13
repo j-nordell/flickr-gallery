@@ -8,9 +8,21 @@ along with a three second forced waiting period so that it will always display o
 
 ## Running the project
 
+### Install the dependencies
 Navigate to the project directory. Run the following command:
 ```bash
 npm i
+```
+
+### Get a Flickr API key
+You can [apply here](https://www.flickr.com/services/apps/create/apply/)
+
+### Create a config file
+Inside the "src" directory, create a config.js file. It should look like this, but replace `<your api key>` with the API key you got from Flickr
+
+```js
+const apiKey = '<your api key>';
+export default apiKey;
 ```
 
 Wait for the packages to install. Run the following command:
