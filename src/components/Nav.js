@@ -6,9 +6,9 @@ const Nav = () => {
   return(
     <nav className="main-nav">
       <ul>
-        <li><NavLink to={'/search/microsoft'}>Microsoft</NavLink></li>
-        <li><NavLink to='/search/macintosh'>Macintosh</NavLink></li>
-        <li><NavLink to='/search/linux'>Linux</NavLink></li>
+        <li><NavLink to='/microsoft'>Microsoft</NavLink></li>
+        <li><NavLink to='/macintosh'>Macintosh</NavLink></li>
+        <li><NavLink to='/linux'>Linux</NavLink></li>
       </ul>
     </nav>
   );

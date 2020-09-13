@@ -1,7 +1,6 @@
 /*jshint esversion: 6 */
 import React from 'react';
 import Photo from './Photo';
-import NotFound from './NotFound';
 
 const PhotoContainer = () => {
   return(
@@ -12,8 +11,6 @@ const PhotoContainer = () => {
         <Photo></Photo>
         <Photo></Photo>
         <Photo></Photo>
-        {/* <!-- Not Found --> */}
-        <NotFound></NotFound>
       </ul>
     </div>
   );
